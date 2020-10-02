@@ -1,18 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var e, fact float64
 	var n int
 
+	e = 0
+	fact = 1
+
 	fmt.Scan(&n)
 
-	fact = 1
-	for i := 1; i < n; i++ {
+	for i := 1; i <= n; i++ {
 		fact = fact * float64(i)
-		e += float64(i) / fact
+		e += (1 / fact)
 	}
+	e++
 
 	fmt.Println(e)
 }
